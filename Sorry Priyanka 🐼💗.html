@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sorry Priyanka 🐼💗</title>
+<style>
+:root{--bg1:#ffe3ef;--bg2:#ffc2dc;--card:#fff;--ink:#7a1f4d;--pink:#ff5fa2;--soft:#ffd6e8;--shadow:rgba(255,95,162,.35);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#3a1530;--bg2:#5a1f48;--card:#4a1c3d;--ink:#ffe3f0;--soft:#6b2a58;--shadow:rgba(255,95,162,.25)}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:"Trebuchet MS","Comic Sans MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2));background-attachment:fixed;text-align:center;overflow-x:hidden}
+.wrap{max-width:560px;margin:0 auto;padding:22px 16px 40px;position:relative;z-index:2}
+h1{font-size:2rem;margin:8px 0;color:var(--pink);text-shadow:0 2px 0 rgba(255,255,255,.6)}
+h2{margin:6px 0 14px;color:var(--pink)}
+p{line-height:1.6;font-size:1.05rem}
+.hero{display:flex;justify-content:center;gap:4px;margin-top:8px}
+.hero svg{width:105px;animation:bob 2.2s ease-in-out infinite}
+.hero svg:nth-child(2){animation-delay:.4s}.hero svg:nth-child(3){animation-delay:.8s}
+@keyframes bob{50%{transform:translateY(-10px) rotate(4deg)}}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.btn{border:0;border-radius:22px;padding:16px 8px;font:inherit;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,#ff7eb6,#ff4f9a);box-shadow:0 6px 0 #d63a80,0 10px 18px var(--shadow);cursor:pointer;transition:transform .15s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #d63a80}
+.btn small{display:block;font-size:1.6rem;margin-bottom:2px}
+.page{display:none;animation:pop .4s}
+.page.on{display:block}
+@keyframes pop{from{opacity:0;transform:scale(.92)}}
+.card{background:var(--card);border-radius:26px;padding:20px 18px;box-shadow:0 10px 26px var(--shadow);margin:14px 0}
+.quote{font-size:1.2rem;font-style:italic;font-weight:600}
+.back{background:var(--card);color:var(--pink);box-shadow:0 4px 0 var(--soft);padding:10px 18px;border-radius:20px;border:2px solid var(--pink);font:inherit;font-weight:700;cursor:pointer;margin-top:14px}
+.big svg{width:175px;margin:6px 4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid .card{margin:0;padding:10px}
+.grid svg{width:100%;max-width:110px}
+.grid b{display:block;font-size:.9rem}
+.yn{display:flex;justify-content:center;gap:18px;align-items:center;min-height:90px;position:relative}
+.heart{position:fixed;top:105%;font-size:26px;animation:up 3.6s linear forwards;z-index:1;pointer-events:none}
+@keyframes up{to{transform:translateY(-120vh) rotate(25deg);opacity:.2}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="page on" id="home">
+  <div class="hero" id="heroPandas"></div>
+  <h1>Sorry, Priyanka 💗</h1>
+  <p>For my cutest best friend, my Bhikari 🥺<br>Tap a button, every page is made only for you.</p>
+  <div class="menu">
+    <button class="btn" data-go="sorry"><small>💌</small>My Sorry</button>
+    <button class="btn" data-go="pandas"><small>🐼</small>Panda Gang</button>
+    <button class="btn" data-go="quote"><small>✨</small>Quote for You</button>
+    <button class="btn" data-go="promise"><small>🤞</small>My Promises</button>
+    <button class="btn" data-go="friend"><small>👯</small>Best Friend</button>
+    <button class="btn" data-go="forgive"><small>🥹</small>Forgive Me?</button>
+  </div>
+</section>
+
+<section class="page" id="sorry">
+  <h2>💌 My Sorry</h2>
+  <div class="big" id="sorryPandas"></div>
+  <div class="card"><p>Priyanka, I’m really, truly sorry. I never want to see you upset, and I feel terrible that I made you angry. You matter so much to me, much more than being right.</p><p>Please be angry for a little while if you need to, but then come back and scold me again like always. 🐼💗</p></div>
+  <button class="back" data-go="home">⬅ Back</button>
+</section>
+
+<section class="page" id="pandas">
+  <h2>🐼 The Panda Gang</h2>
+  <p>All of them are saying sorry too!</p>
+  <div class="grid" id="gang"></div>
+  <button class="back" data-go="home">⬅ Back</button>
+</section>
+
+<section class="page" id="quote">
+  <h2>✨ Quote for Priyanka</h2>
+  <div class="big" id="quotePanda"></div>
+  <div class="card"><p class="quote" id="qtext"></p></div>
+  <button class="btn" id="nextQ" style="padding:12px 22px">Another one 💖</button><br>
+  <button class="back" data-go="home">⬅ Back</button>
+</section>
+
+<section class="page" id="promise">
+  <h2>🤞 My Promises</h2>
+  <div class="card"><p>🌸 I will listen first, then talk.</p><p>🍫 I will bring you chocolates when you’re sad.</p><p>😂 I will make you laugh, even when you try not to.</p><p>🐼 I will always be your best friend, forever.</p></div>
+  <button class="back" data-go="home">⬅ Back</button>
+</section>
+
+<section class="page" id="friend">
+  <h2>👯 My Best Friend</h2>
+  <div class="big" id="friendPandas"></div>
+  <div class="card"><p class="quote">“A best friend is someone who knows all your mess and still stays. Priyanka, thank you for staying.”</p></div>
+  <div class="card"><p>You’re cute, beautiful, kind, and the brightest part of my days. Nobody can replace you. 🌷</p></div>
+  <button class="back" data-go="home">⬅ Back</button>
+</section>
+
+<section class="page" id="forgive">
+  <h2>🥹 Will you forgive me?</h2>
+  <div class="big" id="sadPanda"></div>
+  <div class="yn">
+    <button class="btn" id="yes" style="padding:14px 28px">Yes 💖</button>
+    <button class="btn" id="no" style="padding:14px 22px;background:#b9a3b0;box-shadow:0 6px 0 #8f7a88">No 😈</button>
+  </div>
+  <div class="card" id="yay" style="display:none"><p class="quote">Yayyy! Thank you, my Bhikari! 🎉🐼💗<br>Friends forever, and I’ll treat you to something yummy!</p></div>
+  <button class="back" data-go="home">⬅ Back</button>
+</section>
+
+</div>
+<script>
+function panda(head,patch,ear,mood){
+  var mouth=mood==='sad'?'<path d="M52 88q8-7 16 0" stroke="#5a2a45" stroke-width="3" fill="none" stroke-linecap="round"/>':'<path d="M52 84q8 8 16 0" stroke="#5a2a45" stroke-width="3" fill="none" stroke-linecap="round"/>';
+  var tear=mood==='sad'?'<ellipse cx="38" cy="78" rx="3" ry="5" fill="#8fd3ff"/>':'';
+  return '<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">'+
+  '<circle cx="26" cy="28" r="15" fill="'+ear+'"/><circle cx="94" cy="28" r="15" fill="'+ear+'"/>'+
+  '<ellipse cx="60" cy="66" rx="44" ry="39" fill="'+head+'" stroke="#e8a8c4" stroke-width="2"/>'+
+  '<ellipse cx="41" cy="62" rx="12" ry="15" fill="'+patch+'" transform="rotate(25 41 62)"/>'+
+  '<ellipse cx="79" cy="62" rx="12" ry="15" fill="'+patch+'" transform="rotate(-25 79 62)"/>'+
+  '<circle cx="42" cy="61" r="5" fill="#fff"/><circle cx="78" cy="61" r="5" fill="#fff"/>'+
+  '<circle cx="43" cy="62" r="2.5" fill="#222"/><circle cx="77" cy="62" r="2.5" fill="#222"/>'+
+  '<ellipse cx="60" cy="76" rx="6" ry="4.5" fill="#5a2a45"/>'+mouth+tear+
+  '<circle cx="30" cy="80" r="7" fill="#ff8fbf" opacity=".55"/><circle cx="90" cy="80" r="7" fill="#ff8fbf" opacity=".55"/>'+
+  '<path d="M60 106c-9-7-14-11-14-16a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 5-5 9-14 16z" fill="#ff4f9a" transform="translate(0 6) scale(.55) translate(49 52)"/>'+
+  '</svg>';
+}
+var types=[['White Panda','#ffffff','#2b2b2b','#2b2b2b'],['Black Panda','#3a3a3f','#ffffff','#ffffff'],['Pink Panda','#ffb3d1','#e0457f','#e0457f'],['Blue Panda','#b8dcff','#3f7fd1','#3f7fd1'],['Yellow Panda','#fff2a8','#e0a800','#e0a800'],['Purple Panda','#dcc6ff','#8a5fd1','#8a5fd1'],['Green Panda','#c4f0c8','#3fa65a','#3fa65a'],['Red Panda','#ffb59a','#c4452a','#c4452a']];
+var _n=0;
+function real(head,patch,ear,mood){
+  var k='g'+(_n++);
+  var mouth=mood==='sad'?'<path d="M70 98v4M70 102q-6-5-12-1M70 102q6-5 12-1" stroke="#2a1a22" stroke-width="1.8" fill="none" stroke-linecap="round"/>':'<path d="M70 98v4M70 102q-6 6-12 2M70 102q6 6 12 2" stroke="#2a1a22" stroke-width="1.8" fill="none" stroke-linecap="round"/>';
+  return '<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><defs>'+
+  '<radialGradient id="'+k+'s" cx="50%" cy="42%" r="62%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".32"/></radialGradient>'+
+  '<filter id="'+k+'f"><feGaussianBlur stdDeviation="1.3"/></filter>'+
+  '<filter id="'+k+'t" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter></defs>'+
+  '<g filter="url(#'+k+'t)"><circle cx="30" cy="34" r="18" fill="'+ear+'"/><circle cx="110" cy="34" r="18" fill="'+ear+'"/>'+
+  '<ellipse cx="70" cy="78" rx="53" ry="47" fill="'+head+'"/></g>'+
+  '<ellipse cx="70" cy="78" rx="53" ry="47" fill="url(#'+k+'s)"/>'+
+  '<ellipse cx="70" cy="96" rx="22" ry="16" fill="#000" opacity=".06"/>'+
+  '<g filter="url(#'+k+'f)"><ellipse cx="46" cy="74" rx="11" ry="18" fill="'+patch+'" transform="rotate(28 46 74)"/><ellipse cx="94" cy="74" rx="11" ry="18" fill="'+patch+'" transform="rotate(-28 94 74)"/></g>'+
+  '<circle cx="47" cy="75" r="4.2" fill="#15110f" stroke="#ffffff" stroke-opacity=".25"/><circle cx="93" cy="75" r="4.2" fill="#15110f" stroke="#ffffff" stroke-opacity=".25"/>'+
+  '<circle cx="48.3" cy="73.6" r="1.3" fill="#fff"/><circle cx="94.3" cy="73.6" r="1.3" fill="#fff"/>'+
+  '<path d="M61 90q9-6 18 0q-1 9-9 10q-8-1-9-10z" fill="#141212"/><ellipse cx="70" cy="91.5" rx="5" ry="1.8" fill="#fff" opacity=".35"/>'+mouth+'</svg>';
+}
+function P(i,m){var t=types[i];return real(t[1],t[2],t[3],m)}
+document.getElementById('heroPandas').innerHTML=P(0)+P(2)+P(1);
+document.getElementById('sorryPandas').innerHTML=P(2,'sad');
+document.getElementById('quotePanda').innerHTML=P(0)+P(3);
+document.getElementById('friendPandas').innerHTML=P(0)+P(1);
+document.getElementById('sadPanda').innerHTML=P(2,'sad');
+document.getElementById('gang').innerHTML=types.map(function(t,i){return '<div class="card">'+P(i)+'<b>'+t[0]+'</b></div>'}).join('');
+var quotes=['“Priyanka, you’re the kind of friend people dream of, and I’m the lucky one who got you.”','“Your smile can fix my worst day. Please keep smiling, my Bhikari.”','“Some people are like sunshine in pink. You’re that person for me.”','“A true friend’s anger is just love that got hurt. I’m here to heal it.”','“No matter how many fights, you’ll always be my favourite person.”'];
+var qi=0;
+function showQ(){document.getElementById('qtext').textContent=quotes[qi%quotes.length];qi++}
+showQ();document.getElementById('nextQ').onclick=showQ;
+function go(id){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('on')});document.getElementById(id).classList.add('on');window.scrollTo(0,0)}
+document.querySelectorAll('[data-go]').forEach(function(b){b.onclick=function(){go(b.dataset.go)}});
+function hearts(n){var e=['💖','💗','🐼','🌸','💕'];for(var i=0;i<n;i++){(function(){var h=document.createElement('div');h.className='heart';h.textContent=e[Math.floor(Math.random()*e.length)];h.style.left=Math.random()*95+'vw';h.style.animationDelay=Math.random()*1.2+'s';document.body.appendChild(h);setTimeout(function(){h.remove()},5000)})()}}
+document.getElementById('yes').onclick=function(){document.getElementById('yay').style.display='block';document.getElementById('no').style.display='none';hearts(40)};
+var no=document.getElementById('no');
+function dodge(e){e.preventDefault();no.style.position='relative';no.style.left=(Math.random()*120-60)+'px';no.style.top=(Math.random()*60-30)+'px'}
+no.addEventListener('mouseover',dodge);no.addEventListener('touchstart',dodge);no.addEventListener('click',dodge);
+</script>
+</body>
+</html>
